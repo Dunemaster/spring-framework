@@ -245,6 +245,15 @@ final class DefaultPathContainer implements PathContainer {
 		}
 
 		/**
+		 * Constructor for decoded and parsed segments.
+		 */
+		DefaultPathSegment(String value, String valueToMatch) {
+			this.value = value;
+			this.valueToMatch = valueToMatch;
+			this.parameters = EMPTY_PARAMS;
+		}
+
+		/**
 		 * Constructor for segments without decoding and parsing.
 		 */
 		DefaultPathSegment(String value, DefaultSeparator separator) {
